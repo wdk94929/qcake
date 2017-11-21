@@ -1,0 +1,24 @@
+h1,h2,h3,h4,h5,h6,dl,dd,ul,ol,p,pre,body{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+body{
+	font:12px "微软雅黑",Arial,Helvetica,sans-serif;
+	color:#767676;
+}
+a{
+	text-decoration:none;
+	color:#767676;
+}
+a:hover{
+	color:#b0916a;
+}
+img{
+	vertical-align:bottom;
+}
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/5.shoppingCart.css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header class="header">
+
+    </header>
+    <div class="page_main">
+        <div class="shopCar_box">
+            <div class="page_top">
+                <div>
+                    <i></i>
+                    <span>购物车</span>
+                </div>
+            </div>
+            <div class="user_list">
+                <div class="car_empty">
+                    <span>您的购物车还是空的,赶紧行动吧!</span>
+                    <br>
+                    马上进入 <a href="1.index.html">全部商品</a> 挑选您喜欢的商品!
+                </div>
+                <ul class="buy_flow">
+                    <li class="cur">
+                        <p>我的购物车</p>
+                    </li>
+                    <li class="cur">
+                        <span>&gt;</span>
+                    </li>
+                    <li>
+                        <p>填写订单信息</p>
+                    </li>
+                    <li>
+                        <span>&gt;</span>
+                    </li>
+                    <li>
+                        <p>完成订单</p>
+                    </li>
+                </ul>
+                <ul class="view_list">
+                <!--全部订单 start-->
+                    <!--列表-->
+                    <li>
+                        <ul class="list_title clear">
+                            <li>商品信息</li>
+                            <li>规格</li>
+                            <li>单价(元)</li>
+                            <li>数量</li>
+                            <li>金额</li>
+                            <li>操作</li>
+                        </ul>
+                        <ul class="list_table">
+                            <li>
+                                <table style="width:100%;border:0;cellspacing:0;cellspadding:0;">
+                                    <tfoot>
+                                    <tr class="border_top">
+                                        <td colspan="7" class="all_cho">
+                                                <span>
+                                                    <i ></i>
+                                                    <em></em>
+                                                    <input type="checkbox">
+                                                </span>
+                                            全选
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--分页条 点击购买-->
+                    <li class="clear">
+                        <!--
+                        <ul class="cho_page">
+                            <li><a href="#">上一页</a></li>
+                            <li class="cur_bg"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                        -->
+                        <div class="total_all">
+                            <span>
+                                <samp>
+                                    已选择<a href="javascript:;"></a>款商品
+                                </samp>
+                                合计(不含运费):
+                                <b></b>
+                            </span>
+                            <div>
+                                <input type="button" value="继续购物">
+                                <input type="button" value="结算">
+                            </div>
+                        </div>
+                    </li>
+                <!--全部订单 end-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <div id="prop_container_box"></div>
+    <div id="prop_box">
+        <div class="prop_content">
+            <div class="prop_title">
+                提示信息
+            </div>
+            <div class="prop_message">
+                <ul class="clear">
+                    <li></li>
+                    <li>
+                        <span>删除商品成功</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/5.shoppingCart.js"></script>
+
+</body>
+</html>

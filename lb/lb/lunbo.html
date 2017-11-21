@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 600px;
+				height: 300px;
+				border: 10px solid gray;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			ul:nth-of-type(1){
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: 1s;
+			}
+			li{
+				width: 600px;
+				height: 300px;
+				float: left;
+				list-style-type: none;
+			}
+			img{
+				width: 600px;
+				height: 300px;
+			}
+			ul:nth-of-type(2){
+				position: absolute;
+				top: 260px;
+				left: 50%;
+			}
+			ul:nth-of-type(2) li:nth-of-type(1){
+				background: blueviolet;
+			}
+			ul:nth-of-type(2) li{
+				width: 30px;
+				height: 30px;
+				margin: 5px;
+				border-radius: 50%;
+				float: left;
+				list-style-type: none;
+				background-color: rgba(28,28,213,.6);
+			}
+			span{
+				width: 50px;
+				height: 80px;
+				line-height: 80px;
+				font-size: 56px;
+				color: #fff;
+				text-align: center;
+				background: rgba(0,0,0,.5);
+				position: absolute;
+				top: 120px;
+				left: 0;
+				z-index: 1;
+			}
+			span:nth-of-type(1){
+				left: 550px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			1,使用定时器 让图片动起来，限定图片运动的范围,。
+			2，在移动到最后一张的时候，left=0 时 通过清除过渡时间transition 实现无缝轮播，
+			3，回到第一张图片会有一秒延迟，使用setTimeout一次定时器，解决延迟问题。
+			4，给每个圆点标签使绑定点击事件，用自定义属性，把图片li的下标赋值给num，实现点击移动图片效果。
+			5，
+			
+		-->
+		<script>
+			var arr = ["images/tu1.jpg","images/tu2.jpg","images/tu3.jpg"];
+			var oBody = document.getElementsByTagName("body")[0];
+			var oDiv = document.createElement("div");
+			var oUl = document.createElement("ul");
+			var oNav = document.createElement("ul");
+			var oPrev = document.createElement("span");
+			var oNext = document.createElement("span");
+			oPrev.innerText = "<";
+			oNext.innerText = ">";
+			oDiv.appendChild(oPrev);
+			oDiv.appendChild(oNext);
+			oDiv.appendChild(oUl);
+			oDiv.appendChild(oNav);
+			for(var i=0; i<=arr.length; i++){
+				if(i == arr.length){
+					oUl.innerHTML += `<li><img src=${arr[0]}/></li>`;
+				}else{
+					oUl.innerHTML += `<li><img src=${arr[i]}/></li>`;
+					oNav.innerHTML += `<li></li>`;
+				}
+			}
+			oBody.appendChild(oDiv);
+			var oLi = document.getElementsByTagName("li")[0];
+			var oNavli = oNav.getElementsByTagName("li");
+			var oUlWh = oLi.clientWidth*(arr.length+1);
+			oUl.style.width = oUlWh+"px";
+			oNav.style.marginLeft = -oNav.clientWidth/2+"px";
+			var num = null;
+			var off = true;
+			oDiv.onmouseover = function(){
+				clearInterval(oTimer);
+			}
+			oDiv.onmouseout = function(){
+				oTimer = setInterval(function(){fnTimer()},1100);
+				off = true;
+			}
+		var oTimer = setInterval(function(){fnTimer()},1100);
+		for(var i=0; i<arr.length; i++){
+			oNavli[i].index = i
+			oNavli[i].onclick = function(){
+				num = this.index
+				oUl.style.left = -num*oLi.clientWidth+"px";
+				fnNav()
+			}
+		}
+		oNext.onclick = function(){
+			off = true;
+			fnTimer()
+		}
+		oPrev.onclick = function(){
+			off = false;
+			fnTimer()
+		}
+		function fnTimer(){
+			if(off){
+				num++;
+			}else{
+				num--;
+			}
+			if(num > arr.length){
+				oUl.style.transition = "none";
+				num = 0;
+				oUl.style.left = -num*oLi.clientWidth+"px";
+				setTimeout(function(){
+					oUl.style.transition = "1s";
+					num = 1;
+					oUl.style.left = -num*oLi.clientWidth+"px";
+					fnNav()
+				},10)
+			}else if(num<0){
+				oUl.style.transition = "none";
+				num = arr.length;
+				oUl.style.left = -num*oLi.clientWidth+"px";
+				setTimeout(function(){
+					oUl.style.transition = "1s";
+					num = arr.length-1;
+					oUl.style.left = -num*oLi.clientWidth+"px";
+					fnNav()
+				},10)
+			}
+			else{
+				oUl.style.transition = "1s";
+				oUl.style.left = -num*oLi.clientWidth+"px";
+				fnNav()
+			}
+		}
+		
+		function fnNav(){
+			for(var i=0; i<arr.length; i++){
+				oNavli[i].style.background = "rgba(28,28,213,.6)"
+			}
+			if(num == arr.length){
+				oNavli[0].style.background = "blueviolet";
+			}else{
+				oNavli[num].style.background = "blueviolet";
+			}
+		}
+		</script>
+	</body>
+</html>

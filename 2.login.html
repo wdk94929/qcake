@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/2.login.css">
+	<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+	<header class="header">
+	<!-- 		<iframe src="header.html" frameborder="0"></iframe> -->
+	</header>
+	<div id="login-box">
+		<div class="login-left">
+			<span>Veuillez signer</span>
+			<span>Inviter des amis</span>
+			<span>peut être mystérieux.</span>
+			<span>Vous avez besoin de remplir le numéro de téléphone de votre login</span>
+		</div>
+		<div class="login-right">
+			<ul>
+				<li>
+					<span>
+						用户登录
+					</span>
+				</li>
+				<li>
+					<label for="user_name">请输入用户名</label>
+					<input id="user_name" type="text" name="user_name">
+					<span class="vali_phone_error"></span>
+				</li>
+				<li>
+					<label for="user_pwd">请输入用户密码</label>
+					<input type="password" name="pwd" id="user_pwd">
+					<span class="vali_pwd_error"></span>
+				</li>
+				<li>
+					<input type="submit" value="登录" class="login_btn">
+					<a href="#">忘记密码 ?</a>
+				</li>
+				<li>
+					<span>提示:还不是会员?</span>
+					<a href="3.register.html">立即注册</a>
+				</li>
+				<li>
+					<p>使用合作网站账号登录</p>
+					<a href="#" class="weibo"></a>
+					<a href="#" class="zhifubao"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer class="footer">
+		<!-- 		<iframe src="footer.html" frameborder="0"></iframe> -->
+	</footer>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/2-login.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,919 @@
+body{
+	positin:relative;
+}
+/*页面右侧列表部分*/
+.right-part{
+	position:absolute;
+	top:715px;
+	right:15px;
+}
+.right-part>.top-ul li{
+	width:68px;
+	text-align:right;
+	padding:5px 15px 5px 0;
+	line-height:20px;
+	position:relative;
+	cursor:pointer;
+}
+.right-part>.top-ul li:first-child b{
+	color:#7B9196;
+	display:block;
+}
+.right-part>.top-ul li:first-child span{
+	height:12px;
+	display:block;
+	background:url("../images/icon1.png") no-repeat -312px -148px;
+}
+.right-part>.top-ul li:not(:first-child) i{
+	display:block;
+	width:16px;
+	height:16px;
+	background:url("../images/icon1.png") no-repeat -281px -102px;
+	position:absolute;
+	top:7px;
+	right:-2px;
+}
+.right-part>.top-ul li:first-child a{
+	display:block;
+	margin:0 15px 0 0;
+}
+.right-part>.bottom-ul li{
+	width:75px;
+	text-align:right;
+	padding:5px 8px 5px 0;
+	line-height:20px;
+	cursor:pointer;
+}
+.right-part>.bottom-ul li a{
+	color:#7B9196;
+	font-weight:bold;
+}
+.right-part>.bottom-ul li a:hover{
+	color:#7B9196;
+}
+/***********************轮播**************************/
+#slider{
+	width:100%;
+	height:550px;
+	overflow:hidden;
+}
+#slider .slider-box{
+	width:1350px;
+	height:100%;
+	margin:0 auto;
+	overflow: hidden;
+	position:relative;
+}
+@media screen and (max-width:1100px){
+	#slider .slider-box{
+		width:100%;!imporant;
+	}
+	#slider .slider-box  #navCir{
+		left:480px;
+	}
+	
+	#cake-box{
+		width:100%;!imporant;
+	}
+	#title-box .all-pro{
+		width:100%;!imporant;
+	}
+	#refreshments-box{
+		width:100%;!imporant;
+	}
+	#little-food .all-pro{
+		width:100%;!imporant;
+	}
+	.footer .footer-slider-box{
+		width:100%;!imporant;
+	}
+}
+.slider{
+	width:1350px;
+	height:550px;
+	overflow: hidden;
+	position:absolute;
+}
+#slider .slider:first-child{
+	top:0px;
+	left:0px;
+}
+#slider .slider:nth-child(2){
+	background:#FFFCEF;
+	top:0px;
+	left:1350px;
+}
+#slider .slider:nth-child(3){
+	top:0px;
+	left:2700px;
+	background:#1F2025;
+}
+#slider .slider:nth-child(4){
+	top:0px;
+	left:4050px;
+}
+#slider .slider:nth-child(5){
+	top:0px;
+	left:5400px;
+}
+#slider #container{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/****************div轮播之 情人节 start******************/
+/*轮播div1左右侧背景色*/
+.slider div.slider-left,div.slider-right{
+	width:675px;
+	height:550px;
+	position:absolute;
+	top:0px;
+}
+.slider div.slider-left{
+	left:0px;
+	background:url(../images/sekuai.png);
+}
+.slider div.slider-right{
+	right:0px;
+	background:url(../images/qr-bg-2.png);
+}
+/*中间玫瑰花*/
+@keyframes mid-rose{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+.slider div.mid-flower{
+	width:1000px;
+	height:550px;
+	position:relative;
+	z-index:100;
+	top:0px;
+	left:300px;
+	background:url(../images/cake.png) no-repeat;
+	animation:mid-rose 2s linear;
+	animation-fill-mode:forwards;
+}
+/*中间线动画*/
+@keyframes mid-line {
+	0%{
+		opacity:0;
+		transform:scale(0);
+	}
+	100%{
+		opacity:1;
+		transform:scale(1);
+	}
+}
+.slider #mid-line{
+	position:relative;
+}
+.slider #mid-line img{
+	position:absolute;
+	top:-270px;
+	left:100px;
+	animation:mid-line 2s linear;
+	animation-fill-mode:forwards;
+
+}
+/*轮播左右侧动画效果*/
+.slider div.left-wave,div.right-wave,div.left-top,div.left-bottom,div.left-mid,div.right-mid,div.right-bottom{
+	position:relative;
+}
+/*定义左侧波浪的动画*/
+@keyframes left-wave {
+	0%{
+		transform:translateX(0px);
+	}
+	100%{
+		transform:translateX(65px);
+	}
+}
+.slider #left div.left-wave img{
+	position:absolute;
+	top:-275px;
+	left:-300px;/*235px 刚好，调成300为了做动画*/
+	animation:left-wave 1s linear;
+	animation-fill-mode:forwards;
+}
+/*定义右侧波浪的动画*/
+@keyframes right-wave{
+	0%{
+		transform:translateX(0px);
+	}
+	100%{
+		transform:translateX(-65px);
+	}
+}
+.slider #right div.right-wave img{
+	position:absolute;
+	top:-275px;
+	right:-265px;
+	animation:right-wave 1s linear;
+	animation-fill-mode:forwards;
+}
+/*定义slider中a标签内文字的样式*/
+.slider #left div.left-top a,div.left-bottom a,div.left-mid a{
+	position:absolute;
+	color:white;
+	font-size:20px;
+}
+/*定义左上左下的动画*/
+@keyframes left-font{
+	0%{
+		transform:translateX(0px);
+	}
+	100%{
+		transform:translateX(300px);
+	}
+}
+.slider #left div.left-top a{
+	top:-530px;
+	left:-200px;
+	animation:left-font 2s linear;
+	animation-fill-mode:forwards;
+}
+.slider #left div.left-bottom a{
+	top:-88px;
+	left:-200px;
+	animation:left-font 2s linear;
+	animation-fill-mode:forwards;
+}
+/*定义中间的动画*/
+@keyframes mid-font{
+	0%{
+		transform:translateX(0px);
+	}
+	100%{
+		transform:translateX(580px);
+	}
+}
+.slider #left div.left-mid a{
+	font-size:63px;
+	z-index:101;
+	top:-350px;
+ 	left:-480px;
+	animation:mid-font 2s linear;
+	animation-fill-mode:forwards;
+}
+/*右侧图片动画*/
+@keyframes right-img{
+	0%{
+		transform:translateX(0);
+	}
+	100%{
+		transform:translateX(-550px);
+	}
+}
+.slider #right div.right-mid img{
+	position:absolute;
+	top:-385px;
+	right:-450px;
+	animation:right-img 2s linear;
+	animation-fill-mode:forwards;
+}
+.slider #right div.right-bottom img{
+	position:absolute;
+	top:-80px;
+	right:-450px;
+	animation:right-img 2s linear;
+	animation-fill-mode:forwards;
+}
+/***********轮播图片之 2 小熊之样式 start*************/
+.slider:nth-child(2) i{
+	display:block;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+.slider:nth-child(2) i div{
+	position:absolute;
+}
+@keyframes bear{
+	0%{
+		transform:translateX(-600px);
+	}
+	100%{
+		transform:translateX(0px);
+	}
+}
+.slider:nth-child(2) .bear{
+	top:30px;
+	left:75px;
+	animation:bear 2s ease;
+	animation-fill-mode:forwards;
+}
+.slider:nth-child(2) .bear img{
+	width:519px;
+	height:466px;
+}
+@keyframes banner_title{
+	0%{
+		transform:translateY(-400px);
+	}
+	100%{
+		transform:translateY(0px);
+	}
+}
+.slider:nth-child(2) .banner_title{
+	top:30px;
+	left:570px;
+	animation:banner_title 2s ease;
+	animation-fill-mode:forwards;
+}
+.slider:nth-child(2) .banner_title img{
+	width:415px;
+	height:222px;
+}
+@keyframes banner_tree{
+	0%{
+		transform:translateX(600px);
+	}
+	100%{
+		transform:translateX(0);
+	}
+}
+.slider:nth-child(2) .banner_tree{
+	top:255px;
+	left:870px;
+	animation:banner_tree 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes banner_cake{
+	0%{
+		transform:translate(200px,300px);
+	}
+	100%{
+		transform:translate(0,0);
+	}
+}
+.slider:nth-child(2) .banner_cake{
+	top:255px;
+	left:510px;
+	animation:banner_cake 2s ease;
+	animation-fill-mode:forwards;
+}
+.slider:nth-child(2) .banner_cake img{
+	width:435px;
+	height:292px;
+}
+/***********轮播图片之 3 中秋月饼之样式*************/
+#slider .slider:nth-child(3){
+	background:#1F2025 url("../images/banner-bg.png") no-repeat;
+	background-size:cover;
+}
+#slider .slider:nth-child(3) i{
+	display:block;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+@keyframes banner-815 {
+	0%{
+		transform:translateY(-100px);
+	}
+	100%{
+		transform:translateY(0px);
+	}
+}
+/*引用动画@keyframes banner-815*/
+#slider .slider:nth-child(3) .banner_815{
+	position:absolute;
+	top:10px;
+	left:100px;
+	animation:banner-815 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes banner-moon {
+	0%{
+		transform:translateY(650px);
+	}
+	100%{
+		transform:translateY(0px);
+	}
+}
+/*引用动画@keyframes banner-moon*/
+#slider .slider:nth-child(3) .banner_moon{
+	position:absolute;
+	bottom:65px;
+	left:545px;
+	animation:banner-moon 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes banner-box {
+	0%{
+		transform:translateX(-450px)
+	}
+	100%{
+		transform:translateX(0px)
+	}
+}
+/*引用动画@keyframes banner-box*/
+#slider .slider:nth-child(3) .banner_box{
+	position:absolute;
+	top:0px;
+	left:-330px;
+	animation:banner-box 2s ease;
+}
+/*引用动画@keyframes banner-moon*/
+#slider .slider:nth-child(3) .banner_c_1{
+	position:absolute;
+	bottom:0px;
+	left:100px;
+	animation:banner-moon 2s ease;
+	animation-fill-mode:forwards;
+}
+/*引用动画@keyframes banner-815*/
+#slider .slider:nth-child(3) .banner_c_2{
+	position:absolute;
+	top:0px;
+	left:415px;
+	animation:banner-815 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes banner-title-1 {
+	0%{
+		transform:translateY(600px)
+	}
+	100%{
+		transform:translateY(0px)
+	}
+}
+/*引用动画@keyframes banner-title-1*/
+#slider .slider:nth-child(3) .banner_title_1{
+	position:absolute;
+	top:130px;
+	left:545px;
+	animation:banner-title-1 2s ease;
+	animation-fill-mode:forwards;
+}
+/*引用动画@keyframes banner-815*/
+#slider .slider:nth-child(3) .banner_c_3{
+	position:absolute;
+	top:-95px;
+	right:-220px;
+	animation:banner-815 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes banner-right {
+	0%{
+		transform:translateX(400px);
+	}
+	100%{
+		transform:translateX(0px);
+	}
+}
+/*引用banner-right*/
+#slider .slider:nth-child(3) .banner_c_4{
+	position:absolute;
+	top:60px;
+	right:100px;
+	animation:banner-right 2s ease;
+	animation-fill-mode:forwards;
+}
+/*引用banner-right*/
+#slider .slider:nth-child(3) .banner_w_1{
+	position:absolute;
+	top:80px;
+	right:150px;
+	animation:banner-right 2s ease;
+	animation-fill-mode:forwards;
+}
+/*引用动画@keyframes banner-moon*/
+#slider .slider:nth-child(3) .banner_c_5{
+	position:absolute;
+	bottom:15px;
+	right:50px;
+	animation:banner-moon 2s ease;
+	animation-fill-mode:forwards;
+}
+#slider .slider:nth-child(3) .banner_c_6{
+	position:absolute;
+	bottom:0px;
+	right:-15px;
+	animation:banner-moon 2s ease;
+	animation-fill-mode:forwards;
+}
+/***********轮播图片之 4 中秋备用之样式*************/
+#slider .slider:nth-child(4) .slider-bg{
+	width:100%;
+	height:550px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:url("../images/top-bg.jpg") center;
+	/*background-size:cover;*/
+}
+#slider .slider:nth-child(4) i{
+	display:block;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+@keyframes mon {
+	0%{
+		transform:translateY(-120px)
+	}
+	100%{
+		transform:translateY(0px)
+	}
+}
+#slider .slider:nth-child(4) .mon{
+	position:absolute;
+	top:-180px;
+	left:30%;
+	animation:mon 2s ease;
+	animation-fill-mode:forwards;
+}
+#slider .slider:nth-child(4) .sicon{
+	position:absolute;
+	top:20px;
+	left:1000px;
+	animation:mon 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes light-r {
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+#slider .slider:nth-child(4) .light_r{
+	position:absolute;
+	top:-145px;
+	right:-280px;
+	animation:light-r 2s ease;
+	animation-fill-mode:forwards;
+}
+@keyframes b_w {
+	0%{
+		transform:translateY(500px)
+	}
+	100%{
+		transform:translateY(0px)
+	}
+}
+#slider .slider:nth-child(4) .title{
+	position:absolute;
+	top:120px;
+	left:520px;
+	animation:b_w 2s ease;
+	animation-fill-mode:forwards;
+}
+#slider .slider:nth-child(4) .b_w{
+	position:absolute;
+	bottom:80px;
+	left:503px;
+	animation:b_w 2s ease;
+	animation-fill-mode:forwards;
+}
+/*左右箭头*/
+#slider a.left-arrow,a.right-arrow{
+	display:block;
+	width:30px;
+	height:50px;
+	background-color:#AA2246;
+	border-radius:5px;
+	opacity:.8;
+}
+#slider a:hover{
+	opacity:.5;
+}
+#slider a.left-arrow{
+	position:absolute;
+	top:255px;
+	left:10px;
+}
+#slider a.left-arrow img{
+	position:absolute;
+	top:10px;
+	left:6px;
+}
+#slider a.right-arrow{
+	position:absolute;
+	top:255px;
+	right:10px;
+}
+#slider a.right-arrow img{
+	position:absolute;
+	top:10px;
+	right:6px;
+}
+/*轮播圆点*/
+#slider #navCir{
+	position:absolute;
+	bottom:20px;
+	left:629px;
+	z-index:120;
+}
+#slider #navCir li{
+	display:block;
+	width:17px;
+	height:17px;
+	border-radius:50%;
+	background-color:#B8B7B7;
+	float:left;
+	margin-right:8px;
+	cursor:pointer;
+}
+#slider #navCir li.hover{
+	background-color:#AA2246;
+}
+/*2,4段落标题*/
+div.title-box div.all-pro{
+	width:1136px;
+	border-bottom:1px solid #CCC;
+	padding-bottom:9px;
+	margin:0px auto;
+}
+div.title-box span{
+	display:block;
+	width:290px;
+	font-size:14px;
+	margin:0px auto;
+	text-align:center;
+}
+/*产品照片列表*/
+.cake-box{
+	width:1125px;
+	margin:0px auto;
+	margin-top:15px;
+	display:flex;
+/*	display:-webkit-box;*/
+/*    display: -moz-box;*/
+/*    display: -ms-flexbox;*/
+/*    display: -webkit-flex;*/
+/*    display: flex;*/
+	position:relative;
+	flex-flow:row wrap;
+/*	-webkit-flex-flow:row wrap;*/
+/*    -webkit-box-orient:horizontal;*/
+/*    -webkit-box-lines:multiple;*/
+/*　　-moz-flex-flow:row wrap;*/
+/*    box-orient:horizontal;*/
+/*    box-lines:multiple;*/
+/*    flex-flow:row wrap;*/
+	overflow: hidden;
+	/*justify-content:space-between;*/
+}
+.cake-box div.cake-list div.show-font span{
+	overflow:hidden;
+	margin:0 20px;
+	display:block;
+	text-align:center;
+}
+.cake-box div.cake-list span.font-french{
+	height:18px;
+	font-weight:700;
+	padding-top:5px;
+}
+.cake-box div.cake-list span.font-chs{
+	height:18px;
+}
+.cake-box div.cake-list{
+	width:225px;
+	height:257px;
+	position:relative;
+	margin-top:20px;
+}
+.cake-box div.cake-list img.xinpin{
+	position:absolute;
+	bottom:24px;
+}
+.cake-box div.hidden-font{
+	visibility:hidden;
+	width:216px;
+	height:60px;
+	background:black;
+	opacity:.5;
+	position:absolute;
+	bottom:0px;
+	transition:transform 1s;
+}
+.cake-box div.show-font{
+	background-color:white;
+	position:relative;
+	height:60px;
+	z-index:100;
+}
+.cake-box div.hidden-font span.cake-weight{
+	display:block;
+	color:white;
+	cursor:pointer;
+	padding:10px 15px 5px 20px;
+}
+/*隐藏内容之甜度*/
+.cake-box div.hidden-font span.cake-sweet{
+	display:block;
+	color:white;
+	cursor:pointer;
+	padding:5px 15px 5px 20px;
+ }
+.cake-box div.hidden-font i{
+	display:block;
+	width:25px;
+	height:25px;
+	background:url("../images/icon1.png") no-repeat -260px -60px;
+	position:absolute;
+	top:29px;
+	left:75px;
+}
+.cake-box div.hidden-font i:nth-child(4){
+	left:90px;
+}
+.cake-box div.hidden-font i:nth-child(5){
+	left:105px;
+}
+/*隐藏内容之购物车标识*/
+.cake-box div.hidden-font a{
+	display:block;
+	width:36px;
+	height:36px;
+	position:absolute;
+	top:13px;
+	left:170px;
+	background:#fff url("../images/icon1.png") no-repeat  -39px -6px;
+/*	z-index:500;*/
+}
+.cake-box div.cake-list:hover>div.hidden-font{
+	transform:translateY(-41px);
+	transition:transform 1s;
+	visibility:visible;
+}
+
+/*遮罩层 模态框*/
+#container_box{
+	width: 100%;
+	height:100%;!important;
+	background:#000;
+	opacity:.5;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:10000;
+	display:none;
+}
+.tc-con{
+	position:fixed;
+	top:20%;
+	left:38%;
+	width:330px;
+	height:350px;
+	z-index:10001;
+	background:#f2f6f7;
+	font-size:14px;
+	display:none;
+}
+.tc-con a{
+	position:absolute;
+	top:0px;
+	right:0px;
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../images/icon1.png) no-repeat -220px -95px;
+}
+.tc-con-1{
+	margin:25px 10px 0;
+}
+.tc-con-1 p{
+	padding-bottom:10px;
+	border-bottom:1px solid #b0916a;
+}
+.tc-con-1 p span{
+	font-size:10px;
+}
+.tc-con-1 .weight_msg{
+	overflow:hidden;
+	margin:10px 0 15px;
+}
+.tc-con-1 .weight_msg li{
+	width:20%;
+	height:35px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+	background:url("../images/ok.png") no-repeat 15px -278px;
+}
+
+.tc-con-1 .buy_btn li{
+	float:left;
+	width:50%;
+}
+.tc-con-1 .buy_btn li input{
+	margin:2px;
+	width:98%;
+	height:30px;
+	border:none;
+	background:#b0916a;
+	color:#fff;
+	border-radius:2px;
+	cursor:pointer;
+	outline:none;
+}
+.explain_msg{
+	margin:0 0 0 30px;
+}
+.explain_msg li{
+	margin:9pt 0;
+	font-size:9pt;
+	padding-left:1pc;
+	background:url("../images/icon1.png") no-repeat -283px -103px;
+}
+.cake_num{
+	margin:30px 0 0 30px;
+	padding-bottom:20px;
+}
+.cake_num span{
+	float:left;
+	display:block;
+	padding:0 5px 0 0;
+	line-height:26px;
+}
+.cake_num dl{
+	float:left;
+}
+.cake_num dl>dd{
+	display:block;
+	float:left;
+	width:35px;
+	height:26px;
+	cursor:pointer;
+}
+.cake_num dl>dd:first-child{
+	background:url("../images/icon1.png") no-repeat -7px -253px;
+}
+.cake_num dl>dd:last-child{
+	background:url("../images/icon1.png") no-repeat -67px -253px;
+}
+.cake_num dl>dt{
+	float:left;
+}
+.cake_num dl>dt input{
+	width:35px;
+	height:20px;
+	margin-top:2px;
+	border:none;
+	text-align:center;
+	color:#b0916a;
+}
+
+#prop_container_box{
+	width: 100%;
+	height:100%;
+	background:#c4c4c4;
+	opacity:.3;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:9111;
+	display:none;
+}
+
+#prop_box{
+	width:100%;
+	position:fixed;
+	top:25%;
+	z-index:10000;
+	display:none;
+}
+#prop_box .prop_content{
+	width:300px;
+	margin:0 auto;
+	border:1px solid #B0916A;
+	background:#fff;
+	border-radius:4px;
+}
+.prop_title{
+	background:#B0916A;
+	color:#fff;
+	height:40px;
+	line-height:40px;
+	padding:0 0 0 20px;
+}
+.prop_message{
+	background:#fff;
+	margin:10px;
+}
+.prop_message ul{
+	position:relative;
+	background:#fff;
+}
+.prop_message ul li{
+	float:left;
+}
+.prop_message ul li:first-child{
+	width:48px;
+	height:40px;
+	background:url("../images/ebsig_bg.gif") no-repeat -96px -109px;
+	margin:10px;
+}
+.prop_message ul li:last-child{
+	padding:20px 0px 20px 10px;
+	margin-top:2px;
+}

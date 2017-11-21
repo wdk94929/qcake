@@ -1,0 +1,103 @@
+.footer{
+	background-color:#f2f6f7;
+	margin-top:20px;
+}
+.footer-slider-box{
+	width:1200px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+/*l轮播箭头*/
+.footer-slider-box>i{
+	display:block;
+	width:30px;
+	height:50px;
+	border-radius:5px;
+	position:absolute;
+	cursor:pointer;
+}
+.footer-slider-box>i:nth-child(2){
+	top:108px;
+	left:20px;
+	background:#000 url("../images/arrows-left.png") no-repeat 5px 9px;
+	opacity:.4;
+}
+.footer-slider-box>i:nth-child(3){
+	top:108px;
+	right:20px;
+	background:#000 url("../images/arrows-right.png") no-repeat 5px 9px;
+	opacity:.4;
+}
+.footer-slider-box>i:hover{
+	opacity:.6;
+}
+/*定义轮播li的样式*/
+.footer-slider-box>ul>li{
+	float:left;
+	width:400px;
+}
+.footer-slider-box>ul>li>a{
+	display:block;
+	border-bottom:3px solid #d9e8ec;
+	padding-bottom:6px;
+	margin:15px;
+}
+.footer-slider-box>ul>li>a:hover{
+	border-bottom:3px solid #7b9192;
+}
+/*footer*/
+.footer-booter-box{
+	width:1040px;
+	margin:0 auto;
+	padding:40px 0 20px 0;
+}
+/*footer-left*/
+.footer-booter-box>.footer-left{
+	float:left;
+	width:300px;
+	margin-left:50px;//
+}
+.footer-booter-box>.footer-left>ul{
+	float:left;
+	font-size:14px;
+	margin-left:10px;
+}
+.footer-booter-box>.footer-left>ul>li{
+	margin-top:10px;
+}
+.footer-booter-box>.footer-left>ul>li:first-child{
+	color:#b0916a;
+}
+/*footer-right*/
+.footer-booter-box>.footer-right{
+/*	width:900px;*/
+	float:left;
+	margin-left:40px;
+	border-left:1px solid #bbb;
+}
+.footer-booter-box>.footer-right>ul{
+	font-size:12px;
+	float:left;
+	width:194px;
+	text-align:center;
+}
+.footer-booter-box>.footer-right>ul>li{
+	height:24px;
+}
+.footer-booter-box>.footer-right>ul>li:first-child{
+	font-size:14px;
+	font-weight:600;
+}
+.footer-booter-box>.footer-right>ul:first-child>li:last-child a{
+	display:block;
+	width:25px;
+	height:25px;
+	background:url("../images/w_icon_hd.png");
+	background-size:cover;
+	margin:0 auto;
+}
+.footer-bottom>p{
+	text-align:center;
+	padding:50px 0 20px 0;
+}

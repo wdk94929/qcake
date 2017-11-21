@@ -1,0 +1,290 @@
+.shopCar_box{
+    width:75pc;
+    margin:20px auto 0;
+    min-width:990px;
+    padding:20px 0 30px;
+}
+.page_top{
+    padding:20px 0 10px;
+}
+.page_top div{
+    width:400px;
+    margin:0 auto;
+}
+.page_top i{
+    display:block;
+    width:400px;
+    height:30px;
+    background:url("../images/buy_car.png") no-repeat;
+}.page_top span{
+    display:block;
+    width:400px;
+    text-align:center;
+ }
+
+.user_list{
+    margin:0 auto;
+}
+.car_empty{
+    font-size:14px;
+    line-height:34px;
+    padding:10px 0 20px 140px;
+    margin:75pt auto 200px;
+    width:390px;
+    background:url("../images/car_un.png") no-repeat;
+    display:none;
+}
+.car_empty span{
+    font-size:24px;
+}
+.car_empty a{
+    color:#7b9196;
+    text-decoration:underline;
+}
+
+/*购物车列表*/
+.cur{
+    color:#7b9196;
+}
+.buy_flow{
+    width:880px;
+    margin:30px auto 50px;
+    overflow:hidden;
+}
+.buy_flow li{
+    float:left;
+    width:11pc;
+    font-size:14px;
+    text-align:center;
+}
+.buy_flow li p{
+    border-bottom:5px solid #d9e8ec;
+    line-height:40px;
+}
+.buy_flow li span{
+    font-size:18px;
+    line-height:40px;
+    margin-top:18px;
+}
+.buy_flow li.cur p{
+    border-bottom:5px solid #7b9196;
+}
+
+.view_list{
+    margin:0 auto;
+    overflow: hidden;
+    max-width:750pt;
+    min-height:200px;
+}
+.view_list .list_title li{
+    float:left;
+    font-size:14px;
+    line-height:30px;
+    width:10%;
+    text-align:center;
+}
+.view_list .list_title li:first-child{
+    width:50%;
+}
+.view_list .list_table li{
+    width:100%;
+    background:#f2f6f7;
+    text-align:center;
+}
+.view_list .list_table td{
+    text-align:center;
+    line-height:20px;
+}
+.view_list .list_table .cartCheck span{
+    display:inline-block;
+    width:30px;
+    height:20px;
+    position:relative;
+}
+.view_list .list_table .cartCheck span i{
+    display:block;
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:0px;
+    z-index:1;
+    background:#ccc;
+    margin:8px 0 0 4px;
+}
+.view_list .list_table .cartCheck span em{
+    display:block;
+    width:40px;
+    height:35px;
+    position:absolute;
+    left:0;
+    z-index:1;
+    background:url("../images/ok.png") no-repeat 0 -280px;
+}
+.view_list .list_table .cartCheck span input{
+    display:none;
+}
+.view_list .list_table .pro_left{
+    padding:20px;
+    text-align: left;
+    line-height:20px;
+    position:relative;
+}
+.view_list .list_table .buy_pro_img{
+    width:114px;
+    height:114px;
+}
+.view_list .list_table .aleft{
+    position:absolute;
+    top:20px;
+    left:140px;
+    color:#8c8c8c;
+}
+.view_list .list_table .aleft b{
+    font-weight:400;
+    font-size:18px;
+}
+.cake_num{
+    width:56px;
+    margin:0 auto;
+}
+.view_list .list_table .cake_num input{
+    width:24px;
+    height:1pc;
+    margin-top:2px;
+    border:0;
+    text-align:center;
+    color:#767676;
+}
+.view_list .list_table .cake_num .red{
+    float:left;
+    width:1pc;
+    height:20px;
+    font-size:1pc;
+    line-height:20px;
+    cursor:pointer;
+}
+.view_list .list_table .cake_num dt{
+    float:left;
+    width:24px;
+    height:23px;
+}
+.view_list .list_table .cake_num .add{
+    float:left;
+    width:1pc;
+    height:20px;
+    font-size:1pc;
+    line-height:20px;
+    cursor:pointer;
+}
+.view_list .list_table .del_conform input{
+    color:#fff;
+    outline:0;
+    border:none;
+    background:#b2926c;
+    font-size:9pt;
+    border-radius:4px;
+    cursor:pointer;
+}
+.view_list .list_table .all_cho{
+    text-align:left;
+}
+.view_list .list_table .border_top td{
+    padding:10px 20px;
+    line-height:20px;
+}
+.view_list .list_table .border_top span{
+    display:inline-block;
+    width:30px;
+    height:20px;
+    position:relative;
+}
+.view_list .list_table .border_top span i{
+    display:block;
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:0px;
+    z-index:1;
+    background:#ccc;
+    margin:8px 0 0 4px;
+}
+.view_list .list_table .border_top span em{
+    display:block;
+    width:40px;
+    height:35px;
+    position:absolute;
+    left:0;
+    z-index:1;
+    background:url("../images/ok.png") no-repeat 0 -280px;
+}
+.view_list .list_table .border_top span input{
+    display:none;
+}
+/*分页条 计算总价*/
+.total_all{
+    float:right;
+    width:500px;
+    text-align:right;
+    /*color:#767676;*/
+}
+.total_all span{
+    display:block;
+    height:40px;
+    line-height: 40px;
+    font-size:14px;
+    color:#767676;
+    margin:30px 0 10px;
+}
+.total_all span samp{
+    margin:0 25px 0 5px;
+    color:#767676;
+}
+.total_all span b{
+    font-size:25px;
+    color:#b0916a;
+ }
+.total_all input{
+    color:#fff;
+    border:none;
+    background:#b0916a;
+    padding:0 65px;
+    height:34px;
+    cursor:pointer;
+    border-radius:4px;
+    margin:2px;
+}
+/**
+    .cho_page{
+        margin:84px 0 5px;
+        padding:0 50px;
+        float:right;
+        text-align:right;
+    }
+    .cho_page li{
+        float:left;
+        width:30px;
+        height:30px;
+        border:1px solid #b0916a;
+        text-align:center;
+        line-height:30px;
+        border-left-width:0;
+    }
+    .cur_bg{
+        background:#EACBA2;
+    }
+    .cho_page li a{
+        color:#888;
+    }
+    .cho_page li a:hover{}
+    .cho_page li:first-child{
+        border-left-width:1px;
+        width:50px;
+        border-top-left-radius:5px;
+        border-bottom-left-radius:5px;
+    }
+    .cho_page li:last-child{
+        width:50px;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+    }
+*/

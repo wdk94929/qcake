@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .banner{
+            width:342px;
+            overflow: hidden;
+            position: relative;
+        }
+        a{text-decoration: none;}
+        .banner>.box{
+            width: 600%;
+        }
+				.move{
+					transition:all .3s linear;
+				}
+        .banner>.box>img{
+            float: left;
+						height: 248px;
+        }
+        .banner>a[class]:hover{
+            opacity: .8;
+        }
+        .bannerPoint>:nth-child(n){
+            float: left;
+            width: 18px;
+            height: 3px;
+            border-radius: 5px;
+            margin: 9px 6px 0;
+            background:#ccc;
+            cursor:pointer;
+        }
+        .bannerPoint>:nth-child(n).hover{background: #3af;}
+        .bannerPoint>:nth-child(n):hover{background:rgba(51,170,255,.6);}
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="box move">
+            <img src="img/body_c3.jpg" alt="">
+            <img src="img/body_d4.jpg" alt="">
+            <img src="img/body_b2.jpg" alt="">
+            <img src="img/body_d4.jpg" alt="">
+        </div>
+<!--/////////////////////////////////////////////////  -->
+
+        <a href="javascript:" class="fleft">&lt;</a>
+        <a href="javascript:" class="fright">&gt;</a>
+        <ul class="bannerPoint clear">
+            <li class="hover"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/banner.js"></script>
+</body>
+</html>

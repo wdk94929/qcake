@@ -1,0 +1,79 @@
+/*
+需要引入jquery
+html结构：[select]>(.box>*)+a+a+ul.bannerPoint>li   (注意：表示“下一页”的a 的class必须包含字符串‘right’)
+* 必要的css样式：
+* .move==>移动时过渡效果
+* .hover==>对应“小圆点”的样式
+*/
+(()=>{
+    // 简单左右轮播效果
+    //select==>轮播表示可见的区域的元素（选择器）
+    //TIME==>每次移动的时间间隔
+    let banners=function(select,TIME){
+        let item=$(select+" .box").children();
+        //MOVE==>一次移动的距离=-1*（box下的元素的框模型的宽）
+        let MOVE=-1*item.outerWidth(true);
+        //显示区域显示的轮播元素个数
+        let count=-parseFloat($(select).css("width"))/MOVE|0;
+        //l==>轮播的元素的个数（注意：当点击上一页时变为0，用于避免第一页时点上一页出现空白）
+        //i==>已经移动的次数
+        //k==>记录一轮所需要移动次数=box下元素的个数
+        //n==>记录当前显示的元素为第几个
+        let i=0,n=0,l=item.length,k=l;
+        console.log(l,count);
+        for(let copy=0;copy<count;copy++) item.parent().append(item[copy].outerHTML);
+        //banner==>定义执行一次移动所要的操作函数
+        let banner=function(){
+            if(i===l){
+                i=l?0:k;
+                $(select+">.box").removeClass("move");
+                $(select+">.box").css("margin-left",MOVE*i+"px");
+            }
+            //等待上述if语句执行完成后执行轮播操作
+            setTimeout(()=>{
+                l?i++:i--;
+                n=i===k?1:i+1;
+                l=k;
+                $(select+" .bannerPoint>.hover").removeClass("hover");
+                $(select+" .bannerPoint>:nth-child("+n+")").addClass("hover");
+                $(select+">.box").addClass("move");
+                $(select+">.box").css("margin-left",MOVE*i+"px");
+            },TIME/100);
+        };
+        //轮播开始
+        let timer=setInterval(banner,TIME);
+        //鼠标移入时轮播暂停
+        $(select+"").mouseover(()=>{
+            clearInterval(timer);
+            timer=null;
+        });
+        //鼠标移出时轮播继续
+        $(select+"").mouseleave(()=>timer=setInterval(banner,TIME));
+        //点击小点时跳到对应图片
+        $(select+" .bannerPoint>li").click(e=>{
+            let $li=$(e.target);
+            let li=$li.index();
+            i=li;
+            $(select+" .bannerPoint .hover").removeClass("hover");
+            $(select+" .bannerPoint").children(":eq("+li+")").addClass("hover");
+            $(select+">.box").css("margin-left",MOVE*li+"px");
+        });
+        //点击上（下）一页时跳到对应位图片
+//        $(select+"").on("click","a[class]",e=>{
+//            e.preventDefault();
+//            let a=$(e.target).attr("class");
+//            if(/right/.test(a)) banner();
+//            else{
+//                l=0;
+//                setTimeout(()=>banner(),10);
+//            }
+//        });
+    };
+    banners("#banner1",2500);
+    banners("#soapOperaHot .banner",2000);
+    banners("#newOpera .banner",3000);
+    banners("#movieHot .banner",2000);
+    banners("#newOnline .banner",3000);
+    banners("#newFlash .banner",3000);
+		banners(".banner",1000);//////**********?/*/
+})();

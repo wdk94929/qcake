@@ -1,0 +1,118 @@
+/*头部引入*/
+#header{
+		height:100px;
+	}
+/*底部引入*/
+#footer{
+	height:583px;
+	margin-top:10px;
+}
+/*注册页左部分*/
+#login-box{
+    width:960px;
+	height:450px;
+    margin:30px auto;
+}
+#login-box>.login-left{
+    float:left;
+	width:500px;
+	padding:100px 0px 0 0;
+}
+#login-box>.login-left>span{
+    display:block;
+}
+#login-box>.login-left>span:first-child{
+    font-size:52px;
+    color: #7b9196;
+    width:450px;
+}
+#login-box>.login-left>span:nth-child(2),#login-box>.login-left>span:nth-child(3){
+    font-size: 30px;
+    color: #d9e8ec;
+    width:340px;
+	text-align:right;
+/*    float: right;*/
+}
+/*注册框右部分*/
+#login-box>.login-right{
+	width:450px;
+	padding:30px 0 0 0;
+	float:left;
+}
+#login-box>.login-right li{
+	padding:5px;
+	position:relative;
+}
+#login-box>.login-right li:first-child span:first-child{
+	width:350px;
+	display:block;
+	font-size:18px;
+	line-height:31px;
+	padding-bottom:6px;
+	border-bottom:1px solid #ddd;
+}
+#login-box>.login-right #user_name,#login-box>.login-right #user_pwd{
+	width:235px;
+	height:40px;
+	font-size:18px;
+	border-radius:2px;
+	border-width:0px;
+	padding:5px 10px 5px 45px;
+	background:#f0f0f0 url("../images/icon1.png") no-repeat -355px -285px;
+}
+#login-box>.login-right #user_pwd{
+	background:url("../images/icon1.png") no-repeat #f0f0f0 -355px -336px;
+}
+#login-box>.login-right>ul>li:nth-child(2) label,#login-box>.login-right>ul>li:nth-child(3) label{
+	position:absolute;
+	font-size:14px;
+	left:52px;
+	top:20px;
+}
+#login-box>.login-right>ul>li:nth-child(4) input.login_btn{
+	background:#b0916a;
+	cursor:pointer;
+	padding:0 65px;
+	height:34px;
+	margin:2px;
+	color:white;
+	border:none;
+	border-radius:2px;
+	margin-right:15px;
+	border-width:0px;
+	outline:none;
+}
+#login-box>.login-right>ul>li:nth-child(4) input.login_btn:hover{
+	background:#8B7860;
+}
+#login-box>.login-right>ul>li:nth-child(4) a:hover{
+	text-decoration:underline;
+}
+#login-box>.login-right>ul>li:nth-child(5) a{
+	color:#a5002f;
+}
+#login-box>.login-right>ul>li:last-child a{
+	display:inline-block;
+	position:absolute;
+}
+#login-box>.login-right>ul>li:last-child .weibo{
+	width:35px;
+	height:35px;
+	background:url("../images/icon1.png") no-repeat -4px -362px;
+}
+#login-box>.login-right>ul>li:last-child .zhifubao{
+	width:65px;
+	height:35px;
+	left:40px;
+	background:url("../images/icon1.png") no-repeat -45px -362px;
+}
+#login-box>.login-right>ul>li:last-child p{
+	line-height:40px;
+}
+/*******************JS样式**************************/
+.hidden{
+	visibility:hidden;
+}
+.show{
+	visibility:visible;
+}

@@ -1,0 +1,24 @@
+数据库说明
+    1.数据库名称：mk
+    2.数据库需要创建表格
+        1.创建用户信息表   表名：mk_user
+            包括uid uname upwd email phone avatar user_name gender
+        2.创建首页商品表   表名：mk_index_product
+            包括pid title details pic price href seq_recomended                           seq_new_arrvial seq_top_sale
+        3.创建首页轮播表   表名：mk_index_carousel
+            包括cid img title href
+        4.创建商品家族表   表名：mk_cake_family
+            包括fid fname(首页左侧鲜奶，巧克力，芝士...等，为一个家族)
+        5.创建蛋糕商品表   表名：mk_cake
+            包括cid family_id title price category(种类) spec mname weight sweetness_index(甜度指数) details shelf_time sold_count is_onsale
+
+        6.创建商品照片表   表名：mk_cake_pic
+            包括pid cake_id sm md lg
+        7.创建收货地址表   表名：mk_receiver_address
+            包括aid user_id receiver province city county address cellphone fixedphone postcode tag is_default
+        8.创建购物车商品表  表名：mk_shoppingcart_item
+            包括iid user_id product_id count is_checked
+        9.构建商品订单表    表名：mk_order
+            包括oid user_id adress_id status order_time pay_time deliver_timer received_time
+        10创建商品订单详细表 表名：mk_order_details
+            包括did order_id product_id count

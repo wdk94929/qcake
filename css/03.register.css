@@ -1,0 +1,164 @@
+/*头部引入*/
+#header{
+		height:100px;
+	}
+#header>iframe{
+	width:100%;
+	height:100px;
+	background-color:white;
+	box-shadow:5px 3px #e0e0e0;
+	position:fixed;
+	z-index:1000;
+}
+/*底部引入*/
+#footer{
+	height:583px;
+	margin-top:10px;
+}
+#footer>iframe{
+	width:100%;
+	height:583px;
+}
+/********注册页部分**********/
+.register .register-box{
+    width:960px;
+    margin:0 auto;
+	padding:60px 0 30px 0;
+}
+.register>.register-box>.register-left{
+	float:left;
+	width:600px;
+}
+/*会员注册第一行*/
+.register>.register-box>.register-left li{
+    width:600px;
+    padding:5px;
+    position:relative;
+}
+.register>.register-box>.register-left li:first-child span{
+    font-size:18px;
+    line-height:30px;
+    display:block;
+    width:340px;
+    padding-bottom:6px;
+    border-bottom:2px #D6D6D6 solid;
+}
+/*所有label,input样式初始化*/
+.register>.register-box>.register-left li:not(:nth-child(7)) input{
+    width:235px;
+    height:40px;
+    border:0px;
+    font-size:14px;
+    padding:5px 10px 5px 45px;
+	border-radius:2px;
+}
+.register>.register-box>.register-left li:not(:nth-child(7)) input+span{
+	color:#ab977e;
+}
+.register>.register-box>.register-left li label{
+    position:absolute;
+    left:50px;top:20px;
+    font-size:14px;
+}
+/*第二行*/
+.register>.register-box>.register-left li:nth-child(2) input{
+	background:#F0F0F0 url("../images/icon1.png") no-repeat -355px -286px;
+}
+.register>.register-box>.register-left li:nth-child(3) input{
+    background:#F0F0F0 url("../images/icon1.png") no-repeat -355px -486px;
+}
+/*验证码*/
+.register>.register-box>.register-left li:nth-child(4) input{
+    background:#F0F0F0 url("../images/icon1.png") no-repeat -355px -435px;
+}
+.register>.register-box>.register-left li:nth-child(4) a{
+	display:inline-block;
+	margin:-10px 0px 0px 10px;
+	position:absolute;
+	top:20px;
+	border-radius:2px;
+	padding:3px 10px;
+	background:#b0916a;
+	color:#fff;
+}
+/*密码*/
+.register>.register-box>.register-left li:nth-child(5) input{
+    background:#F0F0F0 url("../images/icon1.png") no-repeat -355px -335px;
+}
+/*确认密码*/
+.register>.register-box>.register-left li:nth-child(6) input{
+    background:#F0F0F0 url("../images/icon1.png") no-repeat -355px -387px;
+}
+/*购物协议*/
+.register>.register-box>.register-left li:nth-child(7){
+	padding:10px 0;
+	line-height:30px;
+}
+.register>.register-box>.register-left li:nth-child(7) input{
+	/*border:0px;*/
+	position:absolute;
+	top:16px;
+}
+.register>.register-box>.register-left li:nth-child(7) span{
+	margin-left:25px;
+}
+/*提交按钮*/
+.register>.register-box>.register-left li:last-child{
+	margin-left:65px;
+}
+.register>.register-box>.register-left li:last-child input{
+	width:157px;
+    height:34px;
+    border:0px;
+    font-size:14px;
+	color:#fff;
+	margin:2px;
+    padding:0 65px;
+	border-radius:2px;
+	background:#B0916A;
+}
+.register>.register-box>.register-left li:last-child input:hover{
+	background:#8B7860;
+}
+/**************右侧部分****************/
+.register>.register-box>.register-right{
+	width:360px;
+	height:450px;
+	position:relative;
+	float:right;
+}
+.register>.register-box>.register-right i{
+	display:inline-block;
+	width:40px;
+	height:40px;
+	background:url("../images/icon1.png") no-repeat -202px -402px;
+	position:absolute;
+	top:180px;
+	right:90px;
+	cursor:pointer;
+}
+.register>.register-box>.register-right i:hover{
+	background:url("../images/icon1.png") no-repeat -202px -443.5px;
+}
+.register>.register-box>.register-right p{
+	font-size:14px;
+	margin:2px 0 0 0;
+	position:absolute;
+	top:180px;
+	right:0px;
+	cursor:pointer;
+}
+.register>.register-box>.register-right p a{
+	color:#a5002f;
+}
+.register>.register-box>.register-right p:hover{
+	color:#B0916A;
+}
+
+/*******************JS样式**************************/
+.hidden{
+	visibility:hidden;
+}
+.show{
+	visibility:visible;
+}
